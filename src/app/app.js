@@ -18,22 +18,13 @@ fetch(url)
         drawPokemon(container, pokeList.objects);
         nextUrl = query + pokeList.meta.next;
         console.log(nextUrl);
-        //let url = query + pokeList.objects[0].resource_uri;
-        //return fetch(url);
+        
     });
 }
-    /*.then((pokeInfo)=>{
-        console.log(pokeInfo);
-        return pokeInfo.json();
-    })
-
-    .then((pokemon) => {
-        console.log(pokemon);
-    });
-}*/
 
 makeFetch(request);
-
+createBtn();
 var btnT = document.querySelector('.loadMoreBtn');
-btnT.addEventListener('click', makeFetch(nextUrl));
+btnT.addEventListener('click', ()=> makeFetch(nextUrl));
+
 

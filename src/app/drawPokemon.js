@@ -23,7 +23,5 @@ export default (container, arr) => {
       		getTypes(arr[i].types, div);
     	});
 
-		//
-        //btn.addEventListener('click', makeFetch(nextUrl));
 }
 	
