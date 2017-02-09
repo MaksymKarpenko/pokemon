@@ -23,7 +23,7 @@ export default (container, arr) => {
       		getTypes(arr[i].types, div);
     	});
 
-		createBtn();
-        btn.addEventListener('click', makeFetch(nextUrl));
+		//
+        //btn.addEventListener('click', makeFetch(nextUrl));
 }
 	
