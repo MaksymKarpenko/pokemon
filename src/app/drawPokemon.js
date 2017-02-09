@@ -1,8 +1,10 @@
 import getTypes from './getType';
+import createBtn from './loadMoreBtn';
+import {nextUrl} from './app';
+import {makeFetch} from './app';
+
 export default (container, arr) => {
-
 	let pokemonId = [];
-
     	//for(let i =0; i<arr.length; i++)
     	arr.forEach(function(item, i, arr){
     		pokemonId.push(arr[i].pkdx_id);
@@ -19,8 +21,9 @@ export default (container, arr) => {
             div.appendChild(img);
     		div.appendChild(name);
       		getTypes(arr[i].types, div);
-    			
-		});
-		
+    	});
+
+		createBtn();
+        btn.addEventListener('click', makeFetch(nextUrl));
 }
 	
