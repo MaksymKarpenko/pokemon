@@ -4,7 +4,7 @@ body{
 		height: 120px;
 		wudth: 120px;
 		}
-	}
+}
 span{
 	display: block;
 }
@@ -21,6 +21,7 @@ span{
 	clear: both;
 	display: table;
 }
+
 .types{
 	background: red;
 	color: white;
@@ -35,25 +36,67 @@ span{
 #post-container{
 	text-align: center;
 	max-width: 50%;
-	content: " ";
-	clear: both;
-	display: table;
-	.post{
-		
+	float: left;
+	.pokeBox{
+		position: relative;
 		margin: 0 10px 10px 0;
 		float:left;
+		display: block;
 		width: 140px;
 		height: 180px;
 		text-align: center;
 		border: 1px solid black;
 		padding: 20px;
-		&-title{
-			font-family:'Lucida Grande', sans-serif;
-			font-size: 45px;
+			&-title{
+				font-family:'Lucida Grande', sans-serif;
+				font-size: 45px;
 				}
+		}
+}
+
+.btn_add_to_FavBox{
+	position: absolute;
+	bottom: 100px;
+	top: 30px;
+	right: 15px;
+	padding: 60px 20px;
+	background: white;
+	color: red;
+	font-size : 17px;
+	cursor: pointer;
+	border: none;
+	opacity : 0.5;
+}
+
+#favorite{
+	text-align: center;
+	max-width: 50%;
+	float: left;
+		.pokeBox{
+		cursor:pointer;
+		position: relative;
+		margin: 0 10px 10px 0;
+		float:left;
+		display: block;
+		width: 140px;
+		height: 180px;
+		text-align: center;
+		border: 1px solid black;
+		padding: 20px;
+			&-title{
+				font-family:'Lucida Grande', sans-serif;
+				font-size: 45px;
+				}
+		}
+		
 	}
 
+.clear{
+	content: " ";
+	clear: both;
+	display: table;
 }
+
 	#btn{
 		.loadMoreBtn
 		{
@@ -66,3 +109,94 @@ span{
 			border-radius: 5px;
 		}
 }
+
+.favBox{
+	margin: 10px;
+	float: left;
+	display: none;
+}
+
+#search{
+	background-color: #adc2eb;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.typesBox{
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-shadow: 0px 8px 16px 0px rgba(0,0,0,0,0.2);
+	z-index: 1;
+}
+
+.itemType{
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.itemType:hover{background-color: #f1f1f1}
+
+#typeBtn:hover {
+	background-color: #3e8e41;
+}
+
+#typBtn:hover .typesBox{
+	display: block;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
+
