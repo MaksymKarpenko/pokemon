@@ -5,15 +5,18 @@ import addToFav from './addToFav';
 import typeArr from './getTypesList';
 //import toDoFilter from './makeFilter';
 
+
 let request = 'http://pokeapi.co/api/v1/pokemon/?limit=12&offset=12';
 let query = 'http://pokeapi.co';
 export let typesRequest = 'http://pokeapi.co/api/v1/type/?limit=999';
 export let nextUrl = '';
 export const container = document.getElementById('post-container');
+container.className = 'animate-bottom'
 export let typesBox = document.getElementById('#typesBox');
 export const pokemon_Array = [];
 export const inputSearch = document.querySelector('#search');
 let favoriteBox = document.querySelector('#favorite');
+let loader = document.getElementById('loader');
 
 chooseFunc(container);
 export let makeFetch = (url) => {
@@ -29,6 +32,8 @@ fetch(url)
        
     });
 }
+
+
 
 makeFetch(request);
 createBtn();
@@ -78,3 +83,14 @@ let showPokemon = () => {
 }
 
 showPokemon();
+
+window.onload = () => {
+    setTimeout(() => {
+    loader.style.display = 'none';
+    container.style.display = 'block';
+    favoriteBox.style.display = 'block';
+    }, 3000);
+ }  
+
+
+
