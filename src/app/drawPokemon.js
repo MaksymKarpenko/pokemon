@@ -35,6 +35,7 @@ arr.forEach(function(item, i, arr){
     });
        
 let box = container.getElementsByClassName('pokeBox');
+console.log(box);
 let value = '';             
 inputSearch.oninput = () =>{
     console.log(inputSearch.value);

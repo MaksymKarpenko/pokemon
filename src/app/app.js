@@ -6,7 +6,7 @@ import typeArr from './getTypesList';
 //import toDoFilter from './makeFilter';
 
 
-let request = 'http://pokeapi.co/api/v1/pokemon/?limit=12&offset=12';
+let request = 'http://pokeapi.co/api/v1/pokemon/?limit=12&offset=12';;
 let query = 'http://pokeapi.co';
 export let typesRequest = 'http://pokeapi.co/api/v1/type/?limit=999';
 export let nextUrl = '';
@@ -33,9 +33,8 @@ fetch(url)
     });
 }
 
-
-
 makeFetch(request);
+
 createBtn();
 var btnT = document.querySelector('.loadMoreBtn');
 btnT.addEventListener('click', ()=> makeFetch(nextUrl));
@@ -86,11 +85,13 @@ showPokemon();
 
 window.onload = () => {
     setTimeout(() => {
-    loader.style.display = 'none';
-    container.style.display = 'block';
-    favoriteBox.style.display = 'block';
+        loader.style.display = 'none';
+        container.style.display = 'block';
+        favoriteBox.style.display = 'block';
     }, 3000);
- }  
+ } 
+
+
 
 
 

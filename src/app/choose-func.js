@@ -61,16 +61,18 @@ container.onmouseout = function(event) {
     let obj = {};
     
     let target = event.target.parentNode;
+
     let image = target.getElementsByClassName('pokeImg');
     //console.log(image[0].src);
     let imgUrl = image[0].src;
 
         let addToFav = (url) => {
-            ///console.log(url);
+           /// console.log(url);
           
           let favoriteBox = document.querySelector('#favorite');
           let div = document.createElement('DIV');
           div.id = target.id;
+          
           div.className = 'pokeBox';
           obj.id = target.id;
           obj.img = url;
